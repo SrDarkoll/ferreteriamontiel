@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ferreteria Montiel</title>
+  <script src="https://kit.fontawesome.com/b408879b64.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="css/inicio.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="menu">
+        <a href="#" class="logo">Ferreteria Montiel</a>
+        <img src="images/logo.png" width="100" height="100">
+      <div class="busqueda-sesion">
+        <input type="search" id="busqueda" placeholder="Buscar producto...">
+        <i class="fa-solid fa-magnifying-glass" id="Search_button"></i>
+      </div>
+        <nav class="navbar">
+          <ul>
+            <li> <a href="inicio.html">Inicio</a></li>
+            <li> <a id="micuenta" href="micuenta.html">Cuenta</a></li>
+            <li> <a href="jardineria.html">Catalogo</a></li>
+            <li>
+              <a href="#">Más <i class="fa-solid fa-bars"></i></a>
+              <ul class="menu-vertical">
+                <li><a href="iniciosesion.html"><i class="fa-solid fa-circle-user"></i> Iniciar Sesión</a></li>
+                <li><a href="carrito.html">🛒 Carrito de Compras</a></li>
+                <li><a href="ubicacion.html"><i class="fa-solid fa-location-crosshairs"></i> Ubicacion y Contacto</a></li>
+                <li><a href="informacion.html">📁 ¿Quienes Somos?</a></li>
+                <li><a href="servicios.html">🧱 Servicios</a></li>
+                <li><a href="faq.HTML"><i class="fa-solid fa-circle-info"></i> Soporte y Ayuda</a></li>
+                <li><a href="/cerrar-sesion" onclick="cerrarSesion()">🔒 Cerrar Sesión</a></li>
+              </ul>
+            </li>    
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div id="busqueda-resultados" style="display: none;">
+    </div>
+      <div class="header-content">
+        <div class="header-txt">
+          <h1 id="welcome-message">¡Bienvenido! </h1>
+          <p>
+            Es un placer darte la más cálida bienvenida a nuestro establecimiento, "Ferretería Montiel" es una empresa familiar con muchos años de experiencia en el ramo ferretero. Ofrecemos una amplia gama de productos para el hogar, la construcción y el jardín, a precios competitivos y con un excelente servicio al cliente, asi mismo ofreciendo la mas alta calidad de productos.
+          </p>
+          <a href="informacion.html" class="btn-1">CONÓCENOS</a>
+          <div class="boton-modal">
+            <label for="btn-modal">
+              NOVEDADES
+            </label>
+          </div>
+          <input type="checkbox" id="btn-modal">
+          <div class="container-modal">
+            <div class="content-modal">
+              <h2>¡EXCLUSIVAMENTE PARA TI TE OFRECEMOS ESTO!</h2>
+              <p><i class="fa-solid fa-earth-americas"></i> DISPONIBILIAD:<br>
+                -Estrenamos las últimas novedades en herramientas, materiales de construcción y artículos para el hogar. <br>
+                -Descubre productos con tecnología de punta que te facilitarán tus tareas.<br>
+                -Sigue las últimas tendencias en decoración y jardinería con nuestros productos nuevos.<br>
+                <i class="fa-solid fa-medal"></i> CALIDAD:<br>
+                -Brindamos productos de marcas reconocidas y de alta calidad. <br>
+                -Te ofrecemos productos que te durarán por mucho tiempo. <br>
+                -Te garantizamos productos que funcionan correctamente y te dan los mejores resultados.<br>
+                <i class="fa-solid fa-certificate"></i> GARANTIA:<br>
+                -Te ofrecemos garantía en todos nuestros productos. <br>
+                -Compra con tranquilidad sabiendo que estás respaldado por nuestra garantía. <br>
+                -Te garantizamos la satisfacción total con tu compra.</p>
+              <div class="btn-cerrar">
+                <label for="btn-modal">Cerrar</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-img">
+          <ul>
+            <li><img src="images/S1.jpg" height="451" width="637"></li>
+            <li><img src="images/S2.jpeg" height="450" width="637"></li>
+            <li><img src="images/S3.jpeg" height="450" width="637"></li>
+            <li><img src="images/S4.png" height="450" width="637"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <section class="container top-categories">
+      <h3 class="heading-1">MEJORES CATEGORIAS > <img src="images/CT.png" width="26" height="26"></h3>
+      <div class="container-categories">
+        <div class="card-category category-garden">
+          <p>Jardinería</p>
+          <a href="jardineria.html" class="category-span">Ver más</a>
+        </div>
+        <div class="card-category category-house">
+          <p>Hogar</p>
+          <a href="hogar.html" class="category-span">Ver más</a>
+        </div>
+        <div class="card-category category-constructor">
+          <p>Construcción</p>
+          <a href="construccion.html" class="category-span">Ver más</a>
+        </div>
+        <div class="card-category category-plumbing">
+          <p>Plomeria</p>
+          <a href="plomeria.html" class="category-span">Ver más</a>
+        </div>
+      </div>
+    </section>
+  
+  <main class="products">
+
+    <h3>PRODUCTOS EN OFERTA > <img src="images/DS.png" width="35" height="35"></h3>
+
+    <div class="container-products">
+      <div class="conte">
+        <div class="card martillo">
+          <img src="images/P1.png">
+        </div>
+        <div class="products-1" data-url="ola.com">
+        <div class="informacion">
+          <h1>Martillo carpintero</h1>
+          <p class="Sent">
+            <i class="fa-solid fa-truck-fast"></i>ENVIO GRATIS
+          </p>
+        </div>
+        <div class="precio">
+          <div class="box-precio">
+            <span class="precio1">$345.00<i class="fa-solid fa-tags"></i></span>
+            <span class="precio2"><b>$250.00</b></span>
+          </div>
+          <span class="shopping"><a href="/productos/PRODUCTO-CONSTRUCCION MARTILLO CARPINTERO 16 OZ.html" class="fas fa-cart-plus btn-1"></a></span>
+        </div>
+      </div>
+    </div>
+      <div class="conte">
+        <div class="card manguera">
+          <img src="images/P2.png">
+        </div>
+        <div class="products-1" data-url="ola.com">
+        <div class="informacion">
+          <h1>Manguera 3 capas</h1>
+          <p class="Sent">
+            <i class="fa-solid fa-truck-fast"></i>ENVIO GRATIS
+          </p>
+        </div>
+        <div class="precio">
+          <div class="box-precio">
+            <span class="precio1">$320.00 <i class="fa-solid fa-tags"></i></span>
+            <span class="precio2"><b>$270.00</b></span>
+          </div>
+          <span class="shopping"><a href="/productos/PRODUCTO.html" class="fas fa-cart-plus btn-1"></a></span>
+        </div>
+      </div>
+    </div>
+      <div class="conte">
+        <div class="card espatula">
+          <img src="images/P3.png">
+        </div>
+        <div class="products-1" data-url="ola.com">
+        <div class="informacion">
+          <h1>Espátula 5 pulgadas</h1>
+          <p class="Sent">
+            <i class="fa-solid fa-truck-fast"></i>ENVIO GRATIS
+          </p>
+        </div>
+        <div class="precio">
+          <div class="box-precio">
+            <span class="precio1">$70.00 <i class="fa-solid fa-tags"></i></span>
+            <span class="precio2"><b>$45.00</b></span>
+          </div>
+          <span class="shopping"><a href="/productos/PRODUCTO-CONSTRUCCION ESPATULA 5 PULGADAS.html" class="fas fa-cart-plus btn-1"></a></span>
+        </div>
+      </div>
+    </div>
+      <div class="conte">
+        <div class="card nivelador">
+          <img src="images/P4.png">
+        </div>
+        <div class="products-1" data-url="ola.com">
+        <div class="informacion">
+          <h1>Nivel de 24 pulgadas</h1>
+          <p class="Sent">
+            <i class="fa-solid fa-truck-fast"></i>ENVIO GRATIS
+          </p>
+        </div>
+        <div class="precio">
+          <div class="box-precio">
+            <span class="precio1">$285.00 <i class="fa-solid fa-tags"></i></span>
+            <span class="precio2"><b>$240.00</b></span>
+          </div>
+          <span class="shopping"><a href="/productos/PRODUCTO-CONSTRUCCION NIVEL.html" class="fas fa-cart-plus btn-1"></a></span>
+        </div>
+      </div>
+
+      <div class="products-search">
+      <div class="products-1" data-url="ola.com">
+        <h1>Pala cuadrada T-2000</h1>
+      </div>
+      <div class="products-1" data-url="ola.com">
+        <h1>Flexómetro 8m/26mm</h1>
+      </div>
+      <div class="products-1" data-url="ola.com">
+        <h1>Pala cuadrada T-2000 43 pulgadas</h1>
+      </div>
+      <div class="products-1" data-url="ola.com">
+        <h1>Flexómetro 5m/16mm</h1>
+      </div>
+      <div class="products-1" data-url="ola.com">
+        <h1>Espátula 4 pulgadas</h1>
+      </div>
+      <div class="products-1" data-url="ola.com">
+        <h1>Guantes para construcción</h1>
+      </div>
+      <div class="products-1" data-url="ola.com">
+        <h1>Martillo carpintero curva tabular 16 OZ</h1>
+      </div>
+      <div class="products-1" data-url="ola.com">
+        <h1>Trapeador tipo mechudo grande</h1>
+      </div>
+      <div class="products-1" data-url="ola.com">
+        <h1>Cubeta plástics con exprimidor 8L</h1>
+      </div>
+      <div class="products-1" data-url="ola.com">
+        <h1>Escoba de vinilo color naranja</h1>
+      </div>
+      <div class="products-1" data-url="ola.com">
+        <h1>Recogedor de plástcio</h1>
+      </div>
+      <div class="products-1" data-url="ola.com">
+        <h1>Escoba de vinilo color morado</h1>
+      </div>
+      <div class="products-1" data-url="ola.com">
+        <h1>Trapeador tipo mechudo mediano</h1>
+      </div>
+      <div class="products-1" data-url="ola.com">
+        <h1>Pintura color balnco 200-500 ml</h1>
+      </div>
+      <div class="products-1" data-url="ola.com">
+        <h1>Tubo pvc 30 1 1/2 x1</h1>
+      </div>
+      <div class="products-1" data-url="ola.com">
+        <h1>Conector pvc de 5 vias 3/4 pulgadas</h1>
+      </div>
+      <div class="products-1" data-url="ola.com">
+        <h1>Tubo pvc 40 1 1/2 x1</h1>
+      </div>
+      <div class="products-1" data-url="ola.com">
+        <h1>Conector pvc de 3 vias</h1>
+      </div>
+      <div class="products-1" data-url="ola.com">
+        <h1>Guantes para trabajos de plomeria BDG</h1>
+      </div>
+      <div class="products-1" data-url="ola.com">
+        <h1>Guantes para trabajos de plomeria BDG de color rojo</h1>
+      </div>
+      <div class="products-1" data-url="ola.com">
+        <h1>Conector para manguera click</h1>
+      </div>
+      <div class="products-1" data-url="ola.com">
+        <h1>Conector 1/2 macho para manguera</h1>
+      </div>
+      <div class="products-1" data-url="ola.com">
+        <h1>Pistola de riego</h1>
+      </div>
+      <div class="products-1" data-url="ola.com">
+        <h1>Guantes para jardinero</h1>
+      </div>
+      <div class="products-1" data-url="ola.com">
+        <h1>Tijeras para ramas 21 Pulgadas</h1>
+      </div>
+      <div class="products-1" data-url="ola.com">
+        <h1>Tijeras para poda</h1>
+      </div>
+      <div class="products-1" data-url="ola.com">
+        <h1>Tijeras para poda 8 pulgadas</h1>
+      </div>
+      <div class="products-1" data-url="ola.com">
+        <h1>Pistola de riego</h1>
+      </div>
+      <div class="products-1" data-url="ola.com">
+        <h1>Guantes para jardinero</h1>
+      </div>
+    </div>
+
+    </div>
+
+  </main>
+  <div class="notfound">NO ENCONTRASTE LO QUE BUSCABAS? ‎ <a href="plomeria.html" class="notfoundlink">> INTENTA AQUI </a></div>
+  <footer class="pie-pagina">
+    <div class="grupo-1">
+      <div class="box">
+        <figure>
+        <a href="#">
+          <img src="images/banner.png" alt="Banner de Ferreteria">
+        </a>
+        </figure>
+      </div>
+      <div class="box">
+        <h2>SOBRE NOSOTROS</h2>
+        <P>Somos un equipo apasionado y comprometido con nuestra misión de ofrecerte los mejores productos/servicios y experiencias excepcionales.</P>
+        <P>En el corazón de nuestra empresa yace una dedicación profunda hacia la excelencia y la satisfacción del cliente.</P>
+      </div>
+      <div class="box">
+        <h2>SIGUENOS</h2>
+        <div class="red-social">
+          <p><a href="#" class="fa fa-facebook"></a>← Facebook</p>
+          <p><a href="#" class="fa fa-instagram"></a>← Instagram</p>
+          <p><a href="#" class="fa fa-twitter"></a>← Twitter / X</p>
+          <p><a href="#" class="fa fa-youtube"></a>← YouTube</p>
+        </div>
+      </div>
+    </div>
+    <div class="grupo-2">
+      <small>&copy; 2024 <b>Ferreteria Montiel</b> - Todos los Derechos Reservados.</small>
+    </div>
+ </footer>
+</div>
+</div>
+<script>
+  
+  document.addEventListener("DOMContentLoaded", async function() {
+    const micuentaLink = document.getElementById("micuenta");
+
+micuentaLink.addEventListener("click", function(event) {
+    event.preventDefault(); // Evita que el enlace redireccione automáticamente
+
+    // Realiza una solicitud al servidor para verificar si el usuario ha iniciado sesión
+    fetch('/verificar-sesion', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            // Si el usuario ha iniciado sesión, redirige a la página de cuenta
+            window.location.href = "micuenta.html";
+        } else {
+          window.alert("No has iniciado sesion aun, redirigiendo...")
+            // Si el usuario no ha iniciado sesión, redirige a la página de inicio de sesión
+            window.location.href = "iniciosesion.html";
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        // En caso de error, redirige a la página de inicio de sesión
+        window.location.href = "iniciosesion.html";
+    });
+});
+function cerrarSesion() {
+        // Realizar la redirección después de 500ms (medio segundo)
+        setTimeout(() => {
+          window.location.reload();
+
+        }, 500);
+    }
+      try {
+          // Realizar una solicitud al servidor para obtener el nombre del usuario
+          const response = await fetch('/obtener-nombre-usuario', {
+              method: 'GET',
+              headers: {
+                  'Content-Type': 'application/json'
+              }
+          });
+
+          if (response.ok) {
+              // Si la solicitud es exitosa, obtener el nombre del usuario desde la respuesta
+              const data = await response.json();
+              const nombreUsuario = data.nombre;
+              
+              // Actualizar el contenido del h1 con el nombre del usuario
+              document.getElementById("welcome-message").textContent = `Bienvenido, ${nombreUsuario}`;
+          } else {
+              console.error('Error al obtener el nombre del usuario:', response.statusText);
+          }
+      } catch (error) {
+          console.error('Error:', error);
+      }
+  });
+</script>
+<script src="inicio.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+# fly.toml app configuration file generated for proyecto-de-ferreteria on 2024-04-14T13:42:50-05:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "ferreteria-montiel"
+primary_region = "qro"
+
+[build]
+
+[env]
+  PORT = "8080"
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = false
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
+  protocol = "tcp"
+
+[[services.ports]]
+  handlers = ["http"]
+  port = "80"
+
+[deploy]
+  command = "node server.js"

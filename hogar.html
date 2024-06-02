@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOGAR</title>
+    <link rel="stylesheet" href="/css/jardineria.css">
+    <script src="jardineria.js"></script>
+    <script src="https://kit.fontawesome.com/b408879b64.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+          <div class="menu">
+            <a href="/images/logo.png" class="logo">Ferreteria Montiel</a>
+            <img src="images/logo.png" width="100" height="100">
+          <div class="busqueda-sesion">
+            <input type="text" id="busqueda" placeholder="Buscar...">
+            <button><i class="fas fa-search"></i></button>
+          </div>  
+            <nav class="navbar">
+              <ul>
+               <li> <a href="inicio.html">Inicio</a></li>
+            <li> <a id="micuenta" href="micuenta.html">Cuenta</a></li>
+            <li> <a href="jardineria.html">Catalogo</a></li>
+            <li>
+              <a href="#">Más <i class="fa-solid fa-bars"></i></a>
+              <ul class="menu-vertical">
+                <li><a href="iniciosesion.html"><i class="fa-solid fa-circle-user"></i> Iniciar Sesión</a></li>
+                <li><a href="carrito.html">🛒 Carrito de Compras</a></li>
+                <li><a href="ubicacion.html"><i class="fa-solid fa-location-crosshairs"></i> Ubicacion y Contacto</a></li>
+                <li><a href="informacion.html">📁 ¿Quienes Somos?</a></li>
+                <li><a href="servicios.html">🧱 Servicios</a></li>
+                <li><a href="faq.HTML"><i class="fa-solid fa-circle-info"></i> Soporte y Ayuda</a></li>
+                <li><a href="/cerrar-sesion" onclick="cerrarSesion()">🔒 Cerrar Sesión</a></li>
+                  </ul>
+                </li>    
+              </ul>
+            </nav>
+          </div>
+        </header>
+    <div class="paginacion">
+        <a href="#">&laquo;</a>
+        <a href="#" class="activo">1</a>
+        <a href="#">&raquo;</a>
+      </div>
+    <div class="cata">
+        
+            <div class="category-list">
+                <h3>OTRAS SECCIONES</h3>
+                <hr>
+                <ul>
+                <li><a href="construccion.html" class="secciones">Construccion</a></li>
+                <li><a href="plomeria.html" class="secciones">Plomeria</a></li>
+                <li><a href="jardineria.html" class="secciones">Jardineria</a></li>
+                </ul>
+                <h3>CATEGORIAS</h3>
+                <hr>
+                <a href="#" class="category-item" data-category="all">Todo</a>
+                <a href="#" class="category-item" data-category="escobas">Escobas</a>
+                <a href="#" class="category-item" data-category="trapeador">Trapeadores</a>
+                <a href="#" class="category-item" data-category="recogedor">Recogedroes</a>
+                <a href="#" class="category-item" data-category="pintura">Pinturas</a>
+            </div>
+        
+       
+        <main class="products">
+            <div class="products-content" category="trapeador">
+                <div class="products-1">
+                    <a href="/productos/PRODUCTO - HOGAR TRAPEADOR.html" class="href"><img src="/images/HOGAR 1.jpg" alt="Manguera" width="240"></a>
+                    <h4>Trapeador tipo mechudo grande</h4>
+                    <p class="marca">KLINTEK</p>
+                    <p>Pabilo de algodón que brinda gran absorción y retención de líquidos  </p>
+                    <p class="pre">$70.00</p>
+                    <a href="/productos/PRODUCTO - HOGAR TRAPEADOR.html" class="btn-1">DETALLES</a>
+                </div>
+                
+            </div>
+            <div class="products-content" category="trapeador">
+                <div class="products-1">
+                    <a href="/productos/PRODUCTO - HOGAR CUBETA PLASTICA.html" class="href"><img src="/images/HOGAR 2.jpg" alt="Manguera" width="240"></a>
+                    <h4>Cubeta plástics con exprimidor 8L</h4>
+                    <p class="marca">KLINTEK</p>
+                    <p>Cubeta plástics con exprimidor incluido ideal para el hogar</p>
+                    <p class="pre">$150.00</p>
+                    <a href="/productos/PRODUCTO - HOGAR CUBETA PLASTICA.html" class="btn-1">DETALLES</a>
+                </div>
+                
+            </div>
+            <div class="products-content" category="escobas">
+                <div class="products-1">
+                    <a href="/productos/PRODUCTO - HOGAR ESCOBA NARANAJA.html" class="href"><img src="/images/HOGAR 3.jpg" alt="Conector PVC de 3 vías" width="240"></a>
+                    <h4>Escoba de vinilo color naranja</h4>
+                    <p class="marca">KINTEK</p>
+                    <p>Escoba de vinilo tipo cepillo ideal para el hogar </p>
+                    <p class="pre">$75.00</p>
+                    <a href="/productos/PRODUCTO - HOGAR ESCOBA NARANAJA.html" class="btn-1">DETALLES</a>
+                </div>
+            </div>
+            
+        
+            <div class="products-content" category="recogedor">
+                <div class="products-1">
+                    <a href="/productos/PRODUCTO - HOGAR RECOGEDOR.html"class="href"><img src="/images/HOGAR 4.jpg" alt="Guantes" width="150"></a>
+                    <h4>Recogedor de plástcio</h4>
+                    <p class="marca">KLINTEK</p>
+                    <p>Recogedor de plástico con bastón d madera de 82 cm </p>
+                    <p class="pre">$70.00</p>
+                    <a href="/productos/PRODUCTO - HOGAR RECOGEDOR.html" class="btn-1">DETALLES</a>
+                </div>
+            </div>
+        
+            <div class="products-content" category="escobas">
+                <div class="products-1">
+                  <a href="/productos/PRODUCTO - HOGAR ESCOBA DE VINILO.html"class="href"><img src="/images/HOGAR 6.jpg" alt="Guantes" width="240"></a>
+                    <h4>Escoba de vinilo color morado</h4>
+                    <p class="marca">KLINTEK</p>
+                    <p>Escoba de vinilo tipo cepillo para el trbajo</p>
+                    <p class="pre">$85.00</p>
+                    <a href="/productos/PRODUCTO - HOGAR ESCOBA DE VINILO.html" class="btn-1">DETALLES</a>
+                </div>
+            </div>
+            <div class="products-content" category="trapeador">
+                <div class="products-1">
+                    <a href="/productos/PRODUCTO - HOGAR TRA MEL.html"class="href"><img src="/images/HOGAR 1.jpg"alt="tijeras para poda" width="240"></a>
+                    <h4>Trapeador tipo mechudo mediano</h4>
+                    <p class="marca">KINTEK</p>
+                    <p>Pabilo de algodón que brinda gran absoción</p>
+                    <p class="pre">$80.00</p>
+                    <a href="/productos/PRODUCTO - HOGAR TRA MEL.html"class="btn-1">DETALLES</a>
+                </div>
+            </div>
+            <div class="products-content" category="pintura">
+                <div class="products-1">
+                    <a href="/productos/PRODUCTO - HOGAR PINTURA.html" class="href"><img src="/images/HOGAR  5.jpg"alt="tijeras para poda" width="240"></a>
+                    <h4>Pintura color balnco 200-500 ml</h4>
+                    <p class="marca">Pinturas Acuario</p>
+                    <p>Pintura para el hogar color balnco</p>
+                    <p class="pre">$140.00</p>
+                    <a href="/productos/PRODUCTO - HOGAR PINTURA.html" class="btn-1">DETALLES</a>
+                </div>
+            </div>
+            
+        
+           
+            
+            
+        </main>
+    </div>
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+          <div class="box">
+            <figure>
+            <a href="#">
+              <img src="/images/Banner.png"  alt="Banner de Ferreteria">
+            </a>
+            </figure>
+          </div>
+          <div class="box">
+            <h2>SOBRE NOSOTROS</h2>
+            <P>Somos un equipo apasionado y comprometido con nuestra misión de ofrecerte los mejores productos/servicios y experiencias excepcionales.</P>
+            <P>En el corazón de nuestra empresa yace una dedicación profunda hacia la excelencia y la satisfacción del cliente.</P>
+          </div>
+          <div class="box">
+            <h2>SIGUENOS</h2>
+            <div class="red-social">
+              <p><a href="#" class="fa fa-facebook"></a>← Facebook</p>
+              <p><a href="#" class="fa fa-instagram"></a>← Instagram</p>
+              <p><a href="#" class="fa fa-twitter"></a>← Twitter / X</p>
+              <p><a href="#" class="fa fa-youtube"></a>← YouTube</p>
+            </div>
+          </div>
+        </div>
+        <div class="grupo-2">
+          <small>&copy; 2024 <b>Ferreteria Montiel</b> - Todos los Derechos Reservados.</small>
+        </div>
+     </footer>
+</body>
+</html>

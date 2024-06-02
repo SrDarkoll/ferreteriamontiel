@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/faq.css">
+  <title> FAQ | Ferreteria Montiel</title>
+  <link rel="icon" type="image/png" href="images/logohd.png" sizes="180x180">
+  <script src="https://kit.fontawesome.com/b408879b64.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="menu">
+        <a href="#" class="logo">Ferreteria Montiel</a>
+        <img src="images/logo.png" width="100" height="100">
+      <div class="busqueda-sesion">
+        <input type="text" id="busqueda" placeholder="Buscar...">
+        <button><i class="fas fa-search"></i></button>
+      </div>  
+        <nav class="navbar">
+          <ul>
+            <li> <a href="Inicio.html">Inicio</a></li>
+            <li> <a href="micuenta.html" id="micuenta">Cuenta</a></li>
+            <li> <a href="jardineria.html">Catalogo</a></li>
+            <li>
+              <a href="#">Más ☰</a>
+              <ul class="menu-vertical">
+                <li><a href="iniciosesion.html">👤 Iniciar Sesion</a></li>
+                <li><a href="carrito.html">🛒 Carrito de Compras</a></li>
+                <li><a href="ubicacion.html">☎ Ubicacion y Contacto</a></li>
+                <li><a href="informacion.html">📁 ¿Quienes Somos?</a></li>
+                <li><a href="servicios.html">🧱 Servicios</a></li>
+                <li><a href="faq.HTML">✉ Soporte y Ayuda</a></li>
+                <li><a href="/cerrar-sesion" onclick="cerrarSesion()">🔒Cerrar sesión</a></li>
+              </ul>
+            </li>    
+          </ul>
+        </nav>
+      </div>
+    </header>
+    </div></HEAD></h1>
+<BODY>
+    <center><h3><p>¿Tienes dudas acerca de nuestros servicios y productos?</p></h3></center>
+      <center><p>Consulta nuestra guia rápida con preguntas que hacen nuestros clientes a menudo:</p></center>
+    <script>
+function mostrarRespuesta(id) {
+    var respuesta = document.getElementById(id);
+    if (respuesta.style.height === "0px") {
+        respuesta.style.height = "75px";
+    } else {
+        respuesta.style.height = "0px";
+    }
+}
+</script>
+      </script>
+  <center>
+    <div class="miCuadro">
+    <div class="pregunta"
+    onclick="mostrarRespuesta('respuesta1')">
+    <p>¿Qué tipos de herramientas ofrecen?</p>
+    </div>
+    <br>
+    <div class="respuesta" id="respuesta1">
+    <p>En la Ferreteria Montiel ofrecemos varios productos de buena calidad,en donde puedes encontrar una amplia variedad de herramientas y suministros para diversas tareas de mantenimiento, reparación y construcción.</p>  
+    </div>
+    </div>
+    <div class="miCuadro">
+      <div class="pregunta"
+      onclick="mostrarRespuesta('respuesta2')">
+      <p>¿Cuáles son las opciones de envio?</p>
+      </div>
+      <br>
+      <div class="respuesta" id="respuesta2">
+      <p>En la Ferreteria Montiel contamos unicamente con 1 distribuidor,nosotros te llevamos personalmente tu pedido de blocks y cemento hacia ti.</p>  
+      </div>
+      </div>
+      <div class="miCuadro">
+        <div class="pregunta"
+        onclick="mostrarRespuesta('respuesta3')">
+        <p>¿Cuál es el horario del servicio al cliente?</p>
+        </div>
+        <br>
+        <div class="respuesta" id="respuesta3">
+        <p>En la Ferreteria Montiel nos preocupamos por ti y por los inconvenientes que pueden ocurrir en nuestra pagina web por eso mismo abajo en esta misma pestaña te dejamos un lugar para que puedas llenar los datos correspondientes y nos pondremos en contectato contigo en la brevedad posible.</p>  
+        </div>
+        </div>
+        <div class="miCuadro">
+          <div class="pregunta"
+          onclick="mostrarRespuesta('respuesta4')">
+          <p>¿Cómo puedo crear una cuenta en su sitio web?</p>
+          </div>
+          <br>
+          <div class="respuesta" id="respuesta4">
+          <p>Para crear una cuenta en la pagina oficial de la Ferreteria Montiel solo tienes que hacer click en la seccion de "Mas" y luego en "Iniciar sesion" que se encuentra en la barra de herramientas ubicada en la parte superior de la pagina web,despues darle a Registrarse Ahora.</p>
+          </div>
+          </div>
+          <div class="miCuadro">
+            <div class="pregunta"
+            onclick="mostrarRespuesta('respuesta5')">
+            <p>¿Qué metodos de pago aceptan?</p>
+            </div>
+            <br>
+            <div class="respuesta" id="respuesta5">
+            <p>En la Ferreteria Montiel aceptamos unicamente pago de manera fisica y digital.</p>  
+            </div>
+            </div>
+            <div class="miCuadro">
+              <div class="pregunta"
+              onclick="mostrarRespuesta('respuesta6')">
+              <p>¿Qué debo hacer si tengo problemas con mi pedido?</p>
+              </div>
+              <br>
+              <div class="respuesta" id="respuesta6">
+              <p>En caso de tener problemas con su pedido, pongase rapidamente en contacto con nosotros y encontraremos la mejor manera de resolverlo.</p>  
+              </div>
+              </div>
+                </center>
+        <h3>
+          <center>
+        <div class="buzon">
+        <div class="titulo">Buzón de Quejas y Sugerencias</div>
+       
+        <div class="campo"><label for="nombre">Nombre:</label> 
+        <input type="text" id="nombre" name="nombre">  
+        </div>
+        <div class="campo">
+          <br>
+          <label for="queja">Escribe tu queja o sugerencia:</label>
+          <br>
+        <input size="25" id="queja" name="queja"></input>
+        </div>
+        
+             </h3>
+          </div>
+        <center><button class="boton"><center>Enviar</center></button></center>
+          <br>  
+        </center>
+        <br>
+        <br>
+        <br>
+        <footer class="pie-pagina">
+          <div class="grupo-1">
+            <div class="box">
+              <figure>
+              <a href="#">
+                <img src="images/banner.png" alt="Banner de Ferreteria">
+              </a>
+              </figure>
+            </div>
+            <div class="box">
+              <h2>SOBRE NOSOTROS</h2>
+              <P>Somos un equipo apasionado y comprometido con nuestra misión de ofrecerte los mejores productos/servicios y experiencias excepcionales.</P>
+              <P>En el corazón de nuestra empresa yace una dedicación profunda hacia la excelencia y la satisfacción del cliente.</P>
+            </div>
+            <div class="box">
+              <h2>SIGUENOS</h2>
+              <div class="red-social">
+                <p><a href="#" class="fa fa-facebook"></a>← Facebook</p>
+                <p><a href="#" class="fa fa-instagram"></a>← Instagram</p>
+                <p><a href="#" class="fa fa-twitter"></a>← Twitter / X</p>
+                <p><a href="#" class="fa fa-youtube"></a>← YouTube</p>
+              </div>
+            </div>
+          </div>
+          <div class="grupo-2">
+            <small>&copy; 2024 <b>Ferreteria Montiel</b> - Todos los Derechos Reservados.</small>
+          </div>
+       </footer>
+      </div>
+      </div>
+      
+          <script>
+            
+            const micuentaLink = document.getElementById("micuenta");
+          
+          micuentaLink.addEventListener("click", function(event) {
+              event.preventDefault(); // Evita que el enlace redireccione automáticamente
+          
+              // Realiza una solicitud al servidor para verificar si el usuario ha iniciado sesión
+              fetch('/verificar-sesion', {
+                  method: 'GET',
+                  headers: {
+                      'Content-Type': 'application/json'
+                  }
+              })
+              .then(response => {
+                  if (response.ok) {
+                      // Si el usuario ha iniciado sesión, redirige a la página de cuenta
+                      window.location.href = "micuenta.html";
+                  } else {
+                    window.alert("No has iniciado sesion aun, redirigiendo...")
+                      // Si el usuario no ha iniciado sesión, redirige a la página de inicio de sesión
+                      window.location.href = "iniciosesion.html";
+                  }
+              })
+              .catch(error => {
+                  console.error('Error:', error);
+                  // En caso de error, redirige a la página de inicio de sesión
+                  window.location.href = "iniciosesion.html";
+              });
+            });
+            function cerrarSesion() {
+        // Realizar la redirección después de 500ms (medio segundo)
+        setTimeout(() => {
+          window.location.reload();
+
+        }, 500);
+    }
+          </script>
+</BODY>
+</HTML>
+          

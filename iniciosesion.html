@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/css/iniciosesion.css">
+  <title>Inicio Sesion | Ferreteria Montiel</title>
+  <link rel="icon" type="image/png" href="images/logohd.png" sizes="180x180">
+  <script src="https://kit.fontawesome.com/b408879b64.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="menu">
+        <a href="#" class="logo">Ferreteria Montiel</a>
+        <img src="images/logo.png" width="100" height="100">
+      <div class="busqueda-sesion">
+        <input type="text" id="busqueda" placeholder="Buscar...">
+        <button><i class="fas fa-search"></i></button>
+      </div>  
+        <nav class="navbar">
+          <ul>
+            <li> <a href="Inicio.html">Inicio</a></li>
+            <li> <a href="micuenta.html" id="micuenta">Cuenta</a></li>
+            <li> <a href="jardineria.html">Catalogo</a></li>
+            <li>
+              <a href="#">Más ☰</a>
+              <ul class="menu-vertical">
+                <li><a href="iniciosesion.html">👤 Iniciar Sesion</a></li>
+                <li><a href="carrito.html">🛒 Carrito de Compras</a></li>
+                <li><a href="ubicacion.html">☎ Ubicacion y Contacto</a></li>
+                <li><a href="informacion.html">📁 ¿Quienes Somos?</a></li>
+                <li><a href="servicios.html">🧱 Servicios</a></li>
+                <li><a href="faq.HTML">✉ Soporte y Ayuda</a></li>
+                <li><a href="/cerrar-sesion" onclick="cerrarSesion()">🔒Cerrar sesión</a></li>
+              </ul>
+            </li>    
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+  <div id="login-form">
+    <h2>Iniciar sesión</h2>
+    <form id="login" action="#" method="post">
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required>
+      </div>
+      <div>
+        <button type="submit">Iniciar sesión</button>
+      </div>
+      <br>
+      <br>
+
+      <input type="checkbox" id="mantener-sesion">
+      <label for="mantener-sesion">Mantener la sesión iniciada</label>
+      <br><br>
+      <a href="contraseñaolvidada.html" style="color: teal">¿Olvidaste la contraseña?</a>
+      <br><br>
+      <p>¿Aun no tienes cuenta? Lleva todas las herramientas que quieras a la puerta de tu casa, acceso a todo el catálogo de la ferretería en un solo clic, da seguimiento a tus compras.</p>
+      <br>
+      <a style="color:teal" href="registrarse.html">Regístrate ahora</a>
+    </form>
+    <div id="message" ></div>
+  </div>
+  <footer class="pie-pagina">
+    <div class="grupo-1">
+      <div class="box">
+        <figure>
+        <a href="#">
+          <img src="images/banner.png" alt="Banner de Ferreteria">
+        </a>
+        </figure>
+      </div>
+      <div class="box">
+        <h2>SOBRE NOSOTROS</h2>
+        <P>Somos un equipo apasionado y comprometido con nuestra misión de ofrecerte los mejores productos/servicios y experiencias excepcionales.</P>
+        <P>En el corazón de nuestra empresa yace una dedicación profunda hacia la excelencia y la satisfacción del cliente.</P>
+      </div>
+      <div class="box">
+        <h2>SIGUENOS</h2>
+        <div class="red-social">
+          <p><a href="#" class="fa fa-facebook"></a>← Facebook</p>
+          <p><a href="#" class="fa fa-instagram"></a>← Instagram</p>
+          <p><a href="#" class="fa fa-twitter"></a>← Twitter / X</p>
+          <p><a href="#" class="fa fa-youtube"></a>← YouTube</p>
+        </div>
+      </div>
+    </div>
+    <div class="grupo-2">
+      <small>&copy; 2024 <b>Ferreteria Montiel</b> - Todos los Derechos Reservados.</small>
+    </div>
+ </footer>
+</div>
+</div>
+
+  <script>
+  document.getElementById("login").addEventListener("submit", async function(event) {
+  event.preventDefault(); 
+
+  var email = document.getElementById("email").value;
+  var contrasena = document.getElementById("contrasena").value;
+
+  try {
+      const response = await fetch('/login', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ email, contrasena })
+      });
+      
+      if (response.ok) {
+        window.alert("¡Inicio de sesion correcto! Redireccionando...")
+        window.location.href = "/micuenta.html";   
+        const data = await response.json();
+          document.cookie = `jwt=${data.token}; path=/`;
+      } else {
+          // Manejar el caso de error aquí, por ejemplo, mostrar un mensaje de error en el formulario de inicio de sesión
+          window.alert("Email o contraseña incorrectos");
+      }
+  } catch (error) {
+      console.error('Error:', error);
+  }
+});
+
+  const micuentaLink = document.getElementById("micuenta");
+
+micuentaLink.addEventListener("click", function(event) {
+    event.preventDefault(); // Evita que el enlace redireccione automáticamente
+
+    // Realiza una solicitud al servidor para verificar si el usuario ha iniciado sesión
+    fetch('/verificar-sesion', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            // Si el usuario ha iniciado sesión, redirige a la página de cuenta
+            window.location.href = "micuenta.html";
+        } else {
+          window.alert("No has iniciado sesion aun, redirigiendo...")
+            // Si el usuario no ha iniciado sesión, redirige a la página de inicio de sesión
+            window.location.href = "iniciosesion.html";
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        // En caso de error, redirige a la página de inicio de sesión
+        window.location.href = "iniciosesion.html";
+    });
+  });
+  function cerrarSesion() {
+        // Realizar la redirección después de 500ms (medio segundo)
+        setTimeout(() => {
+          window.location.reload();
+
+        }, 500);
+    }
+  </script>
+</body>
+</html>

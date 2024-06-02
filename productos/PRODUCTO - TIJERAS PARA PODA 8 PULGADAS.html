@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PODA 8 PULGADAS</title>
+    <link rel="stylesheet" href="PRODUCTO1.css">
+    <script src="https://kit.fontawesome.com/b408879b64.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="menu">
+        <a href="#" class="logo">Ferreteria Montiel</a>
+        <img src="images/logo.png" width="100" height="100">
+      <div class="busqueda-sesion">
+        <input type="text" id="busqueda" placeholder="Buscar...">
+        <button><i class="fas fa-search"></i></button>
+      </div>  
+        <nav class="navbar">
+          <ul>
+        <li> <a href="inicio.html">Inicio</a></li>
+            <li> <a id="micuenta" href="micuenta.html">Cuenta</a></li>
+            <li> <a href="jardineria.html">Catalogo</a></li>
+            <li>
+              <a href="#">Más <i class="fa-solid fa-bars"></i></a>
+              <ul class="menu-vertical">
+                <li><a href="../iniciosesion.html"><i class="fa-solid fa-circle-user"></i> Iniciar Sesión</a></li>
+                <li><a href="../carrito.html">🛒 Carrito de Compras</a></li>
+                <li><a href="../ubicacion.html"><i class="fa-solid fa-location-crosshairs"></i> Ubicacion y Contacto</a></li>
+                <li><a href="../informacion.html">📁 ¿Quienes Somos?</a></li>
+                <li><a href="../servicios.html">🧱 Servicios</a></li>
+                <li><a href="../faq.HTML"><i class="fa-solid fa-circle-info"></i> Soporte y Ayuda</a></li>
+                <li><a href="/cerrar-sesion" onclick="cerrarSesion()">🔒 Cerrar Sesión</a></li>
+              </ul>
+            </li>    
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="pagina-producto">
+        <div class="container-imagen">
+            <img src= "../images/IMAGEN 8.jpg"alt="">
+        </div>
+        <div class="informacion-producto">
+           <div class="titulo">
+            <h1>Tijeras para poda de 8 pulgadas</h1>
+            
+           </div>
+            <div class="precio">
+              <p class="precios">$250.00</p>
+              <p class="iva">IVA incluido</p>
+            </div>
+            <div class="container-agregar">
+                <div class="container-cantidad">
+                    <input type="number" 
+                    placeholder="1"
+                    value="1" 
+                    min="1"
+                    class="input-cantidad"
+                    id="cantidad"
+                    />
+                    <div class="btn-increment-decrement">
+                        <i class="fa-solid fa-chevron-up"id="increment"></i>
+                        <i class="fa-solid fa-chevron-down"id="decrement"></i>
+                    </div>
+                </div>
+                <button class="agregar">
+                    AGREGAR AL CARRITO
+                </button>
+                
+            </div>
+            <div class="info-quantity">
+              <div class="price-tax">
+                <p>$250.00 x <span id="quantity-product">1</span></p>
+              
+              </div>
+            </div>
+            <div class="value">
+              
+            </div>
+            <div class="total">
+              <span>Total</span>
+              <div class="price-total">$250.00</div>
+            </div>
+            <div class="container-description">
+                <h2>Descripcion</h2>
+                <p>Tijeras de jardin para poda diseñada en acero forjado</p>
+            </div>
+            <div class="container-compartir">
+                <div class="container-buttons-social">
+                    <h2>Compartir</h2>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=file:///D:/5%C2%B0CATALOGOS%20FERRETERIA%20MONTIEL/PRODUCTOS/PRODUCTO.html"><i class="fa-brands fa-facebook"></i></a>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    
+    <div class="products">
+      <h3>TAMBIEN TE PUEDEN INTERESAR</h3>
+      <div class="products-content">
+        
+        <div class="products-1">
+          <a href="/productos/PRODUCTO - PLOMERIA TUBO 50.html" class="href"><img src="/images/PLOMERIA tubo pvc 40 1 12 X 1.jpg" width="240"></a>
+          <h4>tubo pvc 40 1 1/2 X 1</h4>
+          <p>Tubo PVC util para instalaciones de plomeria </p>
+          <p class="pre">$150.00</p>
+          <a href="/productos/PRODUCTO - PLOMERIA TUBO 50.html" class="btn-1">DETALLES</a>
+        </div>
+  
+        <div class="products-1">
+          <a href="/productos/PRODUCTO - PLOMERIA CONCETOR 5.html" class="href"><img src="/images/PLOMERIA Conector pvc de 5 vias 34 pulgadas.jpg" width="240"></a>
+          <h4>Conector pvc de 5 vias  3/4 pulgadas</h4>
+          <p>Conector pvc para conexion de 5</p>
+          <p class="pre">$80.00</p>
+          <a href="/productos/PRODUCTO - PLOMERIA CONCETOR 5.html" class="btn-1">DETALLES</a>
+        </div>
+  
+        <div class="products-1">
+          <a href="/productos/PRODUCTO - PLOMERIA TUBO 30.html" class="href"><img src="/images/PLOMERIA Tubo pvc 30 1 12 x1.jpg"width="240"></a>
+          <h4>Tubo pvc 30 1 1/2 x1 </h4>
+          <p> Tubo pvc util para instalaciones de plomeria </p>
+          <p class="pre">$100.00</p>
+          <a href="/productos/PRODUCTO - PLOMERIA TUBO 30.html" class="btn-1">DETALLES</a>
+        </div>
+  
+        <div class="products-1">
+          <a href="/productos/PRODUCTO - PLOMERIA CONECTOR 3.html" class="href"><img src="/images/PLOMERIA Conector pvc de 3 vias.jpg" width="240"></a>
+          <h4>Conector pvc de 3 vias</h4>
+          <p>Conector pvc para conexion de 3</p>
+          <p class="pre">$60.00</p>
+          <a href="/productos/PRODUCTO - PLOMERIA CONECTOR 3.html" class="btn-1">DETALLES</a>
+        </div>
+  
+        
+      </div>
+    </div>
+    
+    <footer class="pie-pagina">
+      <div class="grupo-1">
+        <div class="box">
+          <figure>
+          <a href="#">
+            <img src="D:\INICIO JORDY\images\Banner.png" alt="Banner de Ferreteria">
+          </a>
+          </figure>
+        </div>
+        <div class="box">
+          <h2>SOBRE NOSOTROS</h2>
+          <P>Somos un equipo apasionado y comprometido con nuestra misión de ofrecerte los mejores productos/servicios y experiencias excepcionales.</P>
+          <P>En el corazón de nuestra empresa yace una dedicación profunda hacia la excelencia y la satisfacción del cliente.</P>
+        </div>
+        <div class="box">
+          <h2>SIGUENOS</h2>
+          <div class="red-social">
+            <p><a href="#" class="fa fa-facebook"></a>← Facebook</p>
+            <p><a href="#" class="fa fa-instagram"></a>← Instagram</p>
+            <p><a href="#" class="fa fa-twitter"></a>← Twitter / X</p>
+            <p><a href="#" class="fa fa-youtube"></a>← YouTube</p>
+          </div>
+        </div>
+      </div>
+      <div class="grupo-2">
+        <small>&copy; 2024 <b>Ferreteria Montiel</b> - Todos los Derechos Reservados.</small>
+      </div>
+   </footer>
+    
+        <script src="PRODUCTO.js"></script>     
+</body>
+</html>

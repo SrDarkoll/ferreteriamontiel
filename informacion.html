@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/css/informacion.css">
+  <title>Quienes Somos | Ferreteria Montiel</title>
+  <link rel="icon" type="image/png" href="images/logohd.png" sizes="180x180">
+  <script src="https://kit.fontawesome.com/b408879b64.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="menu">
+        <a href="#" class="logo">Ferreteria Montiel</a>
+        <img src="images/logo.png" width="100" height="100">
+      <div class="busqueda-sesion">
+        <input type="text" id="busqueda" placeholder="Buscar...">
+        <button><i class="fas fa-search"></i></button>
+      </div>  
+        <nav class="navbar">
+          <ul>
+            <li> <a href="Inicio.html">Inicio</a></li>
+            <li> <a href="micuenta.html" id="micuenta">Cuenta</a></li>
+            <li> <a href="jardineria.html">Catalogo</a></li>
+            <li>
+              <a href="#">Más ☰</a>
+              <ul class="menu-vertical">
+                <li><a href="iniciosesion.html">👤 Iniciar Sesion</a></li>
+                <li><a href="carrito.html">🛒 Carrito de Compras</a></li>
+                <li><a href="ubicacion.html">☎ Ubicacion y Contacto</a></li>
+                <li><a href="informacion.html">📁 ¿Quienes Somos?</a></li>
+                <li><a href="servicios.html">🧱 Servicios</a></li>
+                <li><a href="faq.HTML">✉ Soporte y Ayuda</a></li>
+                <li><a href="/cerrar-sesion" onclick="cerrarSesion()">🔒Cerrar sesión</a></li>
+              </ul>
+            </li>    
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="contenedor-somos">
+      <div class="seccion">
+          <h2>HISTORIA FERRETERÍA MONTIEL</h2>
+          <p>Desde 2006, en Reynosa Tamaulipas, Ferretería Montiel ha sido el proyecto de Paco Montiel, quien buscaba asegurar el sustento para su familia.</p>
+      </div>
+      <div class="seccion">
+          <h2>VISION</h2>
+          <p>Ser el referente principal en la venta de herramientas y materiales de construcción en Reynosa Tamaulipas.</p>
+      </div>
+      <div class="seccion">
+          <h2>MISION</h2>
+          <p>Proveer a nuestros clientes herramientas y materiales de construcción, hogar, plomería y jardinería de calidad a precios accesibles, respaldados por un servicio excepcional.</p>
+      </div>
+      <div class="seccion">
+          <h2>VALORES</h2>
+          <ul>
+            <li><strong>Respeto:</strong> Valoramos la diversidad y tratamos a todos con dignidad y consideración.</li>
+            <li><strong>Trabajo en equipo:</strong> Colaboramos de manera efectiva para alcanzar nuestras metas comunes.</li>
+            <li><strong>Confianza:</strong> Construimos relaciones sólidas basadas en la honestidad y la transparencia.</li>
+            <li><strong>Buen servicio:</strong> Nos esforzamos por superar las expectativas de nuestros clientes con cada interacción.</li>
+            <li><strong>Pasión por lo que hacemos:</strong> Nos dedicamos con entusiasmo y energía a nuestro trabajo y a satisfacer las necesidades de nuestros clientes.</li>
+          </ul>
+      </div>
+  </div>
+  
+  
+    <footer class="pie-pagina">
+      <div class="grupo-1">
+        <div class="box">
+          <figure>
+          <a href="#">
+            <img src="images/banner.png" alt="Banner de Ferreteria">
+          </a>
+          </figure>
+        </div>
+        <div class="box">
+          <h2>SOBRE NOSOTROS</h2>
+          <P>Somos un equipo apasionado y comprometido con nuestra misión de ofrecerte los mejores productos/servicios y experiencias excepcionales.</P>
+          <P>En el corazón de nuestra empresa yace una dedicación profunda hacia la excelencia y la satisfacción del cliente.</P>
+        </div>
+        <div class="box">
+          <h2>SIGUENOS</h2>
+          <div class="red-social">
+            <p><a href="#" class="fa fa-facebook"></a>← Facebook</p>
+            <p><a href="#" class="fa fa-instagram"></a>← Instagram</p>
+            <p><a href="#" class="fa fa-twitter"></a>← Twitter / X</p>
+            <p><a href="#" class="fa fa-youtube"></a>← YouTube</p>
+          </div>
+        </div>
+      </div>
+      <div class="grupo-2">
+        <small>&copy; 2024 <b>Ferreteria Montiel</b> - Todos los Derechos Reservados.</small>
+      </div>
+   </footer>
+  </div>
+  </div>
+  
+        <script>
+          const micuentaLink = document.getElementById("micuenta");
+        
+        micuentaLink.addEventListener("click", function(event) {
+            event.preventDefault(); // Evita que el enlace redireccione automáticamente
+        
+        
+            fetch('/verificar-sesion', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+            
+                    window.location.href = "micuenta.html";
+                } else {
+                  window.alert("No has iniciado sesion aun, redirigiendo...")
+            
+                    window.location.href = "iniciosesion.html";
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+         
+                window.location.href = "iniciosesion.html";
+            });
+          });
+          function cerrarSesion() {
+        setTimeout(() => {
+          window.location.reload();
+
+        }, 500);
+    }
+        </script>
+</body>
+</html>

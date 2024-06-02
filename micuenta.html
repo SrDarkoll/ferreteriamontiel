@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/css/cuenta.css">
+  <title>Mi Cuenta | Ferreteria Montiel</title>
+  <link rel="icon" type="image/png" href="images/logohd.png" sizes="180x180">
+  <script src="https://kit.fontawesome.com/b408879b64.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="menu">
+        <a href="#" class="logo">Ferreteria Montiel</a>
+        <img src="images/logo.png" width="100" height="100">
+      <div class="busqueda-sesion">
+        <input type="text" id="busqueda" placeholder="Buscar...">
+        <button id="buttons"><i class="fas fa-search"></i></button>
+      </div>  
+        <nav class="navbar">
+          <ul>
+            <li> <a href="Inicio.html">Inicio</a></li>
+            <li> <a href="micuenta.html" id="micuenta">Cuenta</a></li>
+            <li> <a href="jardineria.html">Catalogo</a></li>
+            <li>
+              <a href="#">Más ☰</a>
+              <ul class="menu-vertical">
+                <li><a href="iniciosesion.html">👤 Iniciar Sesion</a></li>
+                <li><a href="carrito.html">🛒 Carrito de Compras</a></li>
+                <li><a href="ubicacion.html">☎ Ubicacion y Contacto</a></li>
+                <li><a href="informacion.html">📁 ¿Quienes Somos?</a></li>
+                <li><a href="servicios.html">🧱 Servicios</a></li>
+                <li><a href="faq.HTML">✉ Soporte y Ayuda</a></li>
+                <li><a href="/cerrar-sesion" onclick="cerrarSesion()">🔒Cerrar sesión</a></li>
+              </ul>
+            </li>    
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="container account-section">
+        <div class="tab">
+            <a href="#tab0">Mi Cuenta</a>
+            <a href="#tab1" class="active">Editar Perfil</a>
+            <a href="#tab2">Ver Pedidos</a>
+            <a href="#tab3">Configuración</a>
+            <a href="#tab4">Seguridad</a>
+            <a href="#tab5">Métodos de Pago</a>
+            <a href="#tab6">Soporte y Ayuda</a>
+        </div>
+        <div id="tab0" class="tabcontent">
+            <div class="user-info">
+                <p><strong>Nombre:</strong> <span id="nombre"></span></p>
+                <br>
+                <p><strong>Apellidos:</strong> <span id="apellidos"></span></p>
+                <br>
+                <p><strong>Email:</strong> <span id="email"></span></p>
+                <br>
+                <p><strong>Teléfono:</strong> <span id="telefono"></span></p>
+            </div>
+        </div>
+        <div id="tab1" class="tabcontent">
+            <form class="edit-form">
+                <input name="nombre" type="text" placeholder="Nombre">
+                <input name="apellidos" type="text" placeholder="Apellido">
+                <input name="email" type="email" placeholder="Email">
+                <input name="telefono" type="tel" placeholder="Número de teléfono">
+                <input type="hidden" name="userId" id="userId">
+                <label for="avatar">Actualizar avatar:</label>
+                <input type="file" id="avatar">
+                <button type="submit">Guardar Cambios</button>
+            </form>
+        </div>
+        <div id="message"></div>
+        <div id="tab2" class="tabcontent">
+            <h3>Historial de pedidos</h3>
+            <a>Nombre del producto:</a>
+            <br>
+            <a>Fecha de pedido:</a>
+            <br>
+            <a>Metodo de pago:</a>
+            <br>
+            <a>Estado:</a>
+            <br>
+            <a>Metodo de pago:</a>
+            <br>
+            <a>Total:</a>
+        </div>
+        
+        <div id="tab3" class="tabcontent">
+            <h3>Configuración de la cuenta</h3>
+            <form>
+                <label for="language-select">Idioma preferido:</label>
+                <select id="language-select">
+                    <option value="es">Español</option>
+                    <option value="en">Inglés</option>
+                </select>
+                <br>
+                <h3 for="notifications">Notificaciones:</h3>
+                <input type="checkbox" id="notifications" checked> Recibir notificaciones
+                
+                <button type="submit">Actualizar Configuración</button>
+            </form>
+        </div>
+        
+        <div id="tab4" class="tabcontent">
+            <h2>Seguridad</h2>
+            <form class="security-form" id="change-password-form">
+                <input name="currentPassword" type="password" placeholder="Contraseña Actual">
+                <br>
+                <input name="newPassword" type="password" placeholder="Nueva Contraseña">
+                <br>
+                <input name="confirmNewPassword" type="password" placeholder="Confirmar Nueva Contraseña">
+                <br>
+                <button type="submit">Cambiar Contraseña</button>
+            </form>
+            <div id="password-message"></div>
+        </div>
+        
+        
+        <div id="tab5" class="tabcontent">
+            <h2>Métodos de Pago</h2>
+            <button>Añadir Nuevo Método de Pago</button>
+            <p>Listado de métodos de pago existentes...</p>
+        </div>
+        
+        <div id="tab6" class="tabcontent">
+            <h2>Soporte y Ayuda</h2>
+            <p>Accede a nuestras FAQs o envía una solicitud de soporte:</p>
+            <a href="faq.HTML">FAQs</a>
+            <br>
+            <a href="faq.HTML">Contactar Soporte</a>
+        </div>
+        
+    </section>
+    
+    <script>
+             function cerrarSesion() {
+        // Realizar la redirección después de 500ms (medio segundo)
+        setTimeout(() => {
+          window.location.reload();
+
+        }, 500);
+    }
+        document.addEventListener("DOMContentLoaded", async function() {
+            try {
+                // Realizar una solicitud al servidor para obtener el nombre del usuario
+                const response = await fetch('/obtener-nombre-usuario', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Si la solicitud es exitosa, obtener el nombre del usuario desde la respuesta
+                    const data = await response.json();
+                    const nombreUsuario = data.nombre;
+                    const apellidosUsuario = data.apellidos;
+                    const telefonoUsuario = data.telefono;
+                    const emailUsuario = data.email;
+
+                    // Actualizar el contenido del h1 con el nombre del usuario
+                    document.getElementById("nombre").textContent = nombreUsuario;
+                    document.getElementById("apellidos").textContent = apellidosUsuario;
+                    document.getElementById("email").textContent = emailUsuario;
+                    document.getElementById("telefono").textContent = telefonoUsuario;
+                } else {
+                    console.error('Error al obtener el nombre del usuario:', response.statusText);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+
+            const userIdInput = document.getElementById("userId");
+            const userId = userIdInput.value; // Obtener el ID del usuario de algún lugar, por ejemplo, desde una cookie o de otra parte de tu aplicación
+
+            // Completar el campo oculto userId con el ID del usuario
+            userIdInput.value = userId;
+
+            const tabs = document.querySelectorAll(".tab a");
+            const allContents = document.querySelectorAll(".tabcontent");
+
+            function switchTab(event) {
+                event.preventDefault();
+
+                tabs.forEach(tab => {
+                    tab.classList.remove("active");
+                });
+                this.classList.add("active");
+
+                allContents.forEach(content => {
+                    content.style.display = "none";
+                });
+
+                const activeTab = document.querySelector(this.getAttribute("href"));
+                activeTab.style.display = "block";
+            }
+
+            tabs.forEach(tab => {
+                tab.addEventListener("click", switchTab);
+            });
+
+            if (tabs.length > 0) {
+                tabs[0].click();
+            }
+
+            const editForm = document.querySelector(".edit-form");
+
+            editForm.addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    const userId = editForm.querySelector("input[name='userId']").value;
+    const nombre = editForm.querySelector("input[name='nombre']").value;
+    const apellidos = editForm.querySelector("input[name='apellidos']").value;
+    const email = editForm.querySelector("input[name='email']").value;
+    const telefono = editForm.querySelector("input[name='telefono']").value;
+    if(!userId){
+        window.alert("Para ver tu cuenta, Inicia sesion.")
+        return window.location.href("/iniciosesion.html")
+    }
+    // Verificar si algún campo está vacío
+    
+    try {
+        
+        // Construir el objeto con los campos modificados
+        const camposModificados = {};
+        if (nombre) camposModificados.nombre = nombre;
+        if (apellidos) camposModificados.apellidos = apellidos;
+        if (email) camposModificados.email = email;
+        if (telefono) camposModificados.telefono = telefono;
+        if (!nombre && !apellidos && !email && !telefono) {
+        alert("Por favor, modifique al menos un campo.");
+        return; // Detener el envío del formulario si no se ha modificado ningún campo
+    }
+    if (nombre && (nombre.length > 15)) {
+    return window.alert("El nombre debe tener como máximo 15 caracteres");
+}
+if (apellidos && (apellidos.length > 35)) {
+    return window.alert("Los apellidos deben tener como máximo 35 caracteres");
+}
+if (telefono && (telefono.length < 10 || telefono.length > 10)) {
+    return window.alert("El teléfono debe ser de 10 caracteres");
+}
+const response1 = await fetch('/verificar-email', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ email })
+                    });
+
+                    if (response1.status === 400) {
+                        window.alert("Ese email ya está en uso");
+                    } 
+
+        // Aquí puedes continuar con el envío del formulario de actualización de perfil
+        const response = await fetch('/actualizar-perfil', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ userId, ...camposModificados })
+        });
+       
+        if (response.ok) {
+            document.getElementById("message").innerHTML = "<p>¡Perfil actualizado correctamente!</p>";
+            setTimeout(() => {
+                document.getElementById("message").innerHTML = ""; // Vaciar el contenido del mensaje
+            }, 5000);
+        } else {
+            document.getElementById("message").innerHTML = "<p>Error al actualizar el perfil.</p>";
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        document.getElementById("message").innerHTML = "<p>Error al procesar la solicitud.</p>";
+    }
+});
+
+            const changePasswordForm = document.getElementById("change-password-form");
+            const passwordMessage = document.getElementById("password-message");
+
+            changePasswordForm.addEventListener("submit", async function(event) {
+                event.preventDefault();
+
+                const currentPassword = changePasswordForm.querySelector("input[name='currentPassword']").value;
+                const newPassword = changePasswordForm.querySelector("input[name='newPassword']").value;
+                const confirmNewPassword = changePasswordForm.querySelector("input[name='confirmNewPassword']").value;
+
+                try {
+                    const response = await fetch('/cambiar-contrasena', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ currentPassword, newPassword, confirmNewPassword })
+                    });
+
+                    const data = await response.json();
+                    if (response.ok) {
+                        passwordMessage.innerHTML = "<p>" + data.message + "</p>";
+                    } else {
+                        passwordMessage.innerHTML = "<p>Error: " + data.error + "</p>";
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    passwordMessage.innerHTML = "<p>Error al cambiar la contraseña.</p>";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

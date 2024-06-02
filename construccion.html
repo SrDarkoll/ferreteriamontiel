@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONSTRUCCION</title>
+    <link rel="stylesheet" href="css/jardineria.css">
+    <script src="jardineria.js"></script>
+    <script src="https://kit.fontawesome.com/b408879b64.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+          <div class="menu">
+            <a href="#" class="logo">Ferreteria Montiel</a>
+            <img src="images/logo.png" width="100" height="100">
+          <div class="busqueda-sesion">
+            <input type="text" id="busqueda" placeholder="Buscar...">
+            <button><i class="fas fa-search"></i></button>
+          </div>  
+            <nav class="navbar">
+              <ul>
+               <li> <a href="inicio.html">Inicio</a></li>
+            <li> <a id="micuenta" href="micuenta.html">Cuenta</a></li>
+            <li> <a href="jardineria.html">Catalogo</a></li>
+            <li>
+              <a href="#">Más <i class="fa-solid fa-bars"></i></a>
+              <ul class="menu-vertical">
+                <li><a href="iniciosesion.html"><i class="fa-solid fa-circle-user"></i> Iniciar Sesión</a></li>
+                <li><a href="carrito.html">🛒 Carrito de Compras</a></li>
+                <li><a href="ubicacion.html"><i class="fa-solid fa-location-crosshairs"></i> Ubicacion y Contacto</a></li>
+                <li><a href="informacion.html">📁 ¿Quienes Somos?</a></li>
+                <li><a href="servicios.html">🧱 Servicios</a></li>
+                <li><a href="faq.HTML"><i class="fa-solid fa-circle-info"></i> Soporte y Ayuda</a></li>
+                <li><a href="/cerrar-sesion" onclick="cerrarSesion()">🔒 Cerrar Sesión</a></li>
+                  </ul>
+                </li>    
+              </ul>
+            </nav>
+          </div>
+        </header>
+    <div class="paginacion">
+        <a href="#">&laquo;</a>
+        <a href="#" class="activo">1</a>
+        <a href="#">&raquo;</a>
+      </div>
+    <div class="cata">
+        
+            <div class="category-list">
+                <h3>OTRAS SECCIONES</h3>
+                <hr>
+                <ul>
+                <li><a href="jardineria.html" class="secciones">Jardineria</a></li>
+                <li><a href="plomeria.html" class="secciones">Plomeria</a></li>
+                <li><a href="hogar.html" class="secciones">Hogar</a></li>
+                </ul>
+                <h3>CATEGORIAS</h3>
+                <hr>
+                <a href="#" class="category-item" data-category="all">Todo</a>
+                <a href="#" class="category-item" data-category="Palas">Palas</a>
+                <a href="#" class="category-item" data-category="Flexometros">Flexómetros</a>
+                <a href="#" class="category-item" data-category="Martillos">Martillos</a>
+                <a href="#" class="category-item" data-category="Espatulas">Espatulas</a>
+                <a href="#" class="category-item" data-category="Nivel">Nieveles</a>
+                <a href="#" class="category-item" data-category="Guantes">Guantes</a>
+            </div>
+           
+       
+            <main class="products">
+              <div class="products-content" category="Palas">
+                  <div class="products-1">
+                    <a href="/productos/palacuadrada.html" class="href"><img src="/images/CONSTRUCCION 1.jpg" alt="Manguera" width="240"></a>
+                      <h4>Pala cuadrada T-2000</h4>
+                      <p class="marca">TRUPER</p>
+                      <p>Pala cudrada con puño "Y"</p>
+                      <p class="pre">$295.00</p>
+                      <a href="/productos/palacuadrada.html" class="btn-1">DETALLES</a>
+                  </div>
+          
+                
+            </div>
+            <div class="products-content" category="Martillos">
+                <div class="products-1">
+                    <a href="/productos/PRODUCTO-CONSTRUCCION MARTILLO CARPINTERO 16 OZ.html" class="href"><img src="/images/CONSTRUCCION 5.jpg" alt="Manguera" width="240"></a>
+                    <h4>Martilo carpintero 16 OZ</h4>
+                    <p class="marca">TRUPER</p>
+                    <p>Martillo carpintero con mango de madera </p>
+                    <p class="pre">$150.00</p>
+                    <a href="/productos/PRODUCTO-CONSTRUCCION MARTILLO CARPINTERO 16 OZ.html" class="btn-1">DETALLES</a>
+                </div>
+                
+            </div>
+            <div class="products-content" category="Flexometros">
+                <div class="products-1">
+                    <a href="/productos/PRODUCTO-CONSTRUCCION FLEXOMETRO 8M.html" class="href"><img src="/images/CONSTRUCCION 3.jpg" alt="Manguera" width="240"></a>
+                    <h4>Flexómetro 8m/26mm</h4>
+                    <p class="marca">PRETUL</p>
+                    <p>Flexómetro color amarillo con medidas de 8m y 26mm</p>
+                    <p class="pre">$70.00</p>
+                    <a href="/productos/PRODUCTO-CONSTRUCCION FLEXOMETRO 8M.html" class="btn-1">DETALLES</a>
+                </div>
+                
+            </div>
+            <div class="products-content" category="Nivel">
+                <div class="products-1">
+                    <a href="/productos/PRODUCTO-CONSTRUCCION NIVEL.html" class="href"><img src="/images/CONSTRUCCION 9.jpg" alt="Conector PVC de 3 vías" width="240"></a>
+                    <h4>Nivel de 24 pulgadas</h4>
+                    <p class="marca">TRUPER</p>
+                    <p>Nivel profesional NP-24 para trabajos de construcción</p>
+                    <p class="pre">$240.00</p>
+                    <a href="/productos/PRODUCTO-CONSTRUCCION NIVEL.html" class="btn-1">DETALLES</a>
+                </div>
+            </div>
+            
+        
+            <div class="products-content" category="Palas">
+                <div class="products-1">
+                    <a href="/productos/PRODUCTO-CONSTRUCCION P T-2000.html"class="href"><img src="/images/CONSTRUCCION 2.jpg" alt="Guantes" width="240"></a>
+                    <h4>Pala cuadrada T-2000 43 pulgadas</h4>
+                    <p class="marca">TRUPER</p>
+                    <p>Pala cudrada con cabeza de acero de carbón </p>
+                    <p class="pre">$380.00</p>
+                    <a href="/productos/PRODUCTO-CONSTRUCCION P T-2000.html" class="btn-1">DETALLES</a>
+                </div>
+            </div>
+        
+            <div class="products-content" category="Flexometros">
+                <div class="products-1">
+                    <a href="/productos/PRODUCTO-CONSTRUCCION FLEXOMETRO 5mm.html"class="href"><img src="/images/CONSTRUCCION 4.jpg"alt="Tijeras para ramas" width="240"></a>
+                    <h4>Flexómetro 5m/16mm</h4>
+                    <p class="marca">PRETUL</p>
+                    <p>Flexómetrocolor celeste con medidas de 5m y 16mm</p>
+                    <p class="pre">$70.00</p>
+                    <a href="/productos/PRODUCTO-CONSTRUCCION FLEXOMETRO 5mm.html" class="btn-1">DETALLES</a>
+                </div>
+            </div>
+            <div class="products-content" category="Espatulas">
+                <div class="products-1">
+                    <a href="/productos/PRODUCTO-CONSTRUCCION ESPATULA 4 PULGADAS.html" class="href"><img src="/images/CONSTRUCCION 7.jpg"alt="tijeras para poda" width="240"></a>
+                    <h4>Espátula 4 pulgadas</h4>
+                    <p class="marca">PETRUL</p>
+                    <p>Espátula flexible con una medida de 4 pulgadas</p>
+                    <p class="pre">$41.00</p>
+                    <a href="/productos/PRODUCTO-CONSTRUCCION ESPATULA 4 PULGADAS.html" class="btn-1">DETALLES</a>
+                </div>
+            </div>
+            <div class="products-content" category="Guantes">
+                <div class="products-1">
+                    <a href="/productos/PRODUCTO-CONSTRUCCION GUANTES.html" class="href"><img src="/images/CONSTRUCCION 10.jpg"alt="tijeras para poda" width="240"></a>
+                    <h4>Guantes para construcción</h4>
+                    <p class="marca">PETRUL</p>
+                    <p>Guantes con recubrimiento de nitrilo</p>
+                    <p class="pre">$60.00</p>
+                    <a href="/productos/PRODUCTO-CONSTRUCCION GUANTES.html" class="btn-1">DETALLES</a>
+                </div>
+            </div>
+            
+        
+            <div class="products-content" category="Espatulas">
+                <div class="products-1">
+                    <a href="/productos/PRODUCTO-CONSTRUCCION ESPATULA 5 PULGADAS.html" class="href"><img src="/images/CONSTRUCCION 8.jpg" alt="Conector PVC de 3 vías" width="240"></a>
+                    <h4>Espátula 5 pulgadas</h4>
+                    <p class="marca">TRUPER</p>
+                    <p>Espátula flexible con una medida de 5 pulgadas</p>
+                    <p class="pre">$45.00</p>
+                    <a href="/productos/PRODUCTO-CONSTRUCCION ESPATULA 5 PULGADAS.html" class="btn-1">DETALLES</a>
+                </div>
+            </div>
+            <div class="products-content" category="Martillos">
+              <div class="products-1">
+                  <a href="/productos/PRODUCTO-CONSTRUCCION MARTILLO CURVO.html" class="href"><img src="/images/CONSTRUCCION 6.jpg" alt="Guantes" width="240"></a>
+                  <h4>Martillo carpintero curva tabular 16 OZ</h4>
+                  <p class="marca">TRUPER</p>
+                  <p>Martillo carpintero con curva tabular C/mango </p>
+                  <p class="pre">$250.00</p>
+                  <a href="/productos/PRODUCTO-CONSTRUCCION MARTILLO CURVO.html" class="btn-1">DETALLES</a>
+              </div>
+          </div>
+            
+            
+        </main>
+    </div>
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+          <div class="box">
+            <figure>
+            <a href="#">
+              <img src="/images/Banner.png"  alt="Banner de Ferreteria">
+            </a>
+            </figure>
+          </div>
+          <div class="box">
+            <h2>SOBRE NOSOTROS</h2>
+            <P>Somos un equipo apasionado y comprometido con nuestra misión de ofrecerte los mejores productos/servicios y experiencias excepcionales.</P>
+            <P>En el corazón de nuestra empresa yace una dedicación profunda hacia la excelencia y la satisfacción del cliente.</P>
+          </div>
+          <div class="box">
+            <h2>SIGUENOS</h2>
+            <div class="red-social">
+              <p><a href="#" class="fa fa-facebook"></a>← Facebook</p>
+              <p><a href="#" class="fa fa-instagram"></a>← Instagram</p>
+              <p><a href="#" class="fa fa-twitter"></a>← Twitter / X</p>
+              <p><a href="#" class="fa fa-youtube"></a>← YouTube</p>
+            </div>
+          </div>
+        </div>
+        <div class="grupo-2">
+          <small>&copy; 2024 <b>Ferreteria Montiel</b> - Todos los Derechos Reservados.</small>
+        </div>
+     </footer>
+</body>
+</html>
